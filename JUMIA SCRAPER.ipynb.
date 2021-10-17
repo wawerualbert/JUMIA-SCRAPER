@@ -1,0 +1,13 @@
+import re
+import requests
+from bs4 import BeautifulSoup
+
+r = requests.get('https://jumia.co.ke')
+doc = r.text
+soup = BeautifulSoup(doc, 'html.parser')
+
+target = soup.find_all(string="Everyday Deals")
+
+tags = soup.find_all('div')
+tags[0]
+
